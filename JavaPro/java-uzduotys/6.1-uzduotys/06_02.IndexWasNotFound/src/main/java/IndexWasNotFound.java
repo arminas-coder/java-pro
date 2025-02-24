@@ -3,7 +3,6 @@
 import java.util.Scanner;
 
 public class IndexWasNotFound {
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int[] array = new int[10];
@@ -19,7 +18,20 @@ public class IndexWasNotFound {
         System.out.print("Search for? ");
         int searching = Integer.valueOf(scanner.nextLine());
 
-        // Implement the search functionality here
-    }
+        boolean found = false;
 
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == searching) {
+                System.out.println(searching + " is at index " + i + ".");
+                found = true;
+                break;
+            }
+        }
+
+        if (!found) {
+            System.out.println(searching + " was not found.");
+        }
+
+        scanner.close();
+    }
 }
