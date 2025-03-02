@@ -1,21 +1,35 @@
+class Debt {
+    private double balance;
+    private double interestRate;
+
+    public Debt(double initialBalance, double initialInterestRate) {
+        this.balance = initialBalance;
+        this.interestRate = initialInterestRate;
+    }
+    public void printBalance() {
+        System.out.println(balance);
+    }
+    public void waitOneYear() {
+        this.balance = this.balance * this.interestRate;
+    }
+}
 
 public class Main {
 
     public static void main(String[] args) {
-        // Test your Debt class here
-        //Debt mortgage = new Debt(120000.0, 1.01);
-        //mortgage.printBalance();
+        Debt mortgage = new Debt(12000, 1.01);
 
-        //mortgage.waitOneYear();
-        //mortgage.printBalance();
+        mortgage.printBalance();
 
-        //int years = 0;
+        mortgage.waitOneYear();
+        mortgage.printBalance();
 
-        //while (years < 20) {
-        //    mortgage.waitOneYear();
-        //    years = years + 1;
-        //}
+        int years = 0;
+        while (years < 30) {
+            mortgage.waitOneYear();
+            years = years + 1;
+        }
+        mortgage.printBalance();
 
-        //mortgage.printBalance();
     }
 }
