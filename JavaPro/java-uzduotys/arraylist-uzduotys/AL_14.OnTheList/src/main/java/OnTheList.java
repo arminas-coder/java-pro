@@ -1,4 +1,5 @@
 
+import javax.naming.directory.SearchControls;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -6,8 +7,10 @@ public class OnTheList {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
         ArrayList<String> list = new ArrayList<>();
+
+        System.out.println("Enter string (End with empty text): ");
+
         while (true) {
             String input = scanner.nextLine();
             if (input.equals("")) {
@@ -15,6 +18,15 @@ public class OnTheList {
             }
 
             list.add(input);
+        }
+
+        System.out.print("Search for? ");
+        String searchFor = scanner.nextLine();
+
+        if (list.contains(searchFor)) {
+            System.out.println(searchFor + " Was found!");
+        } else {
+            System.out.println(searchFor + " Was not found!");
         }
 
     }
