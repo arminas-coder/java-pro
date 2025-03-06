@@ -18,7 +18,7 @@ public class MainProgram {
 
         paulsCard.eatAffordably();
         System.out.println("Paul: " + paulsCard);
-        
+
         mattsCard.addMoney(50);
         System.out.println("Matt: " + mattsCard);
     }

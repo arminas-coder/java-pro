@@ -3,13 +3,14 @@ public class PersonalInformation {
 
     private String firstName;
     private String lastName;
-    private String identificationNumber;
+    private int identificationNumber;
 
-    public PersonalInformation(String firstName, String lastName, String identificationNumber) {
+    public PersonalInformation(String firstName, String lastName, int identificationNumber) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.identificationNumber = identificationNumber;
     }
+
 
     public String getFirstName() {
         return firstName;
@@ -19,7 +20,7 @@ public class PersonalInformation {
         return lastName;
     }
 
-    public String getIdentificationNumber() {
+    public int getIdentificationNumber() {
         return identificationNumber;
     }
 
